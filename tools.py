@@ -72,3 +72,9 @@ def netprice2ytm(price, rate, end_date, tolerance=1e-4, max_iterations=1000):
             ytm_high = ytm_mid
 
     raise ValueError("未能在指定迭代次数内找到解")
+
+
+if __name__ == '__main__':
+    print(ytm2netprice(1.89, 2.47, '2054-07-25'))
+    print(netprice2ytm(113.177, 2.47, '2054-07-25'))
+    print(netprice2ytm(115.6, 2.57, '2054-05-20'))
